@@ -130,17 +130,19 @@
 		function drawEverything(){
 			// next line blanks out the screen with black	
 			colorRect(0,0,canvas.width, canvas.height,'black');	
+			//canvasContext.font = "italic 40pt arial";
+			canvasContext.font = " 40pt arial";
 
 			if(showingScreen){				
 				canvasContext.fillStyle = "white";
 				if (player1Score >= WINNING_SCORE){
-					canvasContext.fillText("Você Ganhou", 350, 200);
+					canvasContext.fillText("Você Ganhou", 250, 200);
 				} else if (player2Score >= WINNING_SCORE) {
-					canvasContext.fillText("O Computaodor Ganhou", 350, 200);
+					canvasContext.fillText("O Computador Ganhou", 125, 200);
 				}
 				
 
-				canvasContext.fillText("Clique para continuar", 350, 500);
+				canvasContext.fillText("Clique para continuar", 150, 500);
 				return;
 			}
 
