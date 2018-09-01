@@ -10,6 +10,7 @@
 		var ballSpeedY = 4;
 
 		var paddle1Y = 250;
+		var paddle2Y = 250;
 		const PADDLE_HEIGTH = 100;
 
 		function calculateMousePos(evt){
@@ -41,13 +42,23 @@
 				});
 		}	
 		
+		function ballReset(){
+			ballSpeedX = -ballSpeedX;
+			ballX = canvas.width/2;
+			ballY = canvas.height/2;
+		}
 
 		function moveEverything(){
+
 			ballX = ballX + ballSpeedX;
 			ballY = ballY + ballSpeedY;
 
-			if (ballX < 0){
-				ballSpeedX = -ballSpeedX;
+			if (ballX < 0){	
+				if (ballY > paddle1Y && ballY < paddle1Y+PADDLE_HEIGTH){
+						ballSpeedX = -ballSpeedX;
+				} else {			
+					ballReset();
+				}	
 			}
 			if (ballX > canvas.width){
 				ballSpeedX = -ballSpeedX;
@@ -67,6 +78,9 @@
 
 			//this is left player paddle
 			colorRect(0, paddle1Y,10,100,'white');
+
+			//this is rigth computer player paddle
+			colorRect(canvas.width - 10, paddle2Y,10,100,'white');
 
 			//next line draws the ball
 			//colorRect(ballX,100,10,10,'red');
