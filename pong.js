@@ -128,6 +128,7 @@ function drawEverything(){
 			colorRect(0,0,canvas.width, canvas.height,'black');	
 			//canvasContext.font = "italic 40pt arial";
 			canvasContext.font = " 40pt arial";
+			canvas.style.border = "5px solid #fff";
 
 			if(showingScreen){				
 				canvasContext.fillStyle = "white";
