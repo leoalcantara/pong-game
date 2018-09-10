@@ -39,7 +39,7 @@ function handMouseClick(evt){
 
 window.onload = function(){			
 	canvas = document.getElementById('gameCanvas');
-	canvasContext = canvas.getContext('2d');
+	canvasContext = canvas.getContext('2d');	
 	
 	var framesPerSecond = 30;			
 	setInterval(function(){
@@ -119,7 +119,7 @@ function moveEverything(){
 
 function drawNet(){
 	for (var i = 0; i < canvas.height; i+=40) {
-		colorRect(canvas.width/2-1,i,2,20,'white');
+		colorRect(canvas.width/2-1, i, 2, 25,'white');
 	}
 }
 
@@ -127,19 +127,18 @@ function drawEverything(){
 			// next line blanks out the screen with black	
 			colorRect(0,0,canvas.width, canvas.height,'black');	
 			//canvasContext.font = "italic 40pt arial";
-			canvasContext.font = " 40pt arial";
+			canvasContext.font = " 70pt VT323";
 			canvas.style.border = "5px solid #fff";
 
 			if(showingScreen){				
 				canvasContext.fillStyle = "white";
+				canvasContext.font = " 30pt VT323";
 				if (player1Score >= WINNING_SCORE){
 					canvasContext.fillText("Você Ganhou", 250, 200);
 				} else if (player2Score >= WINNING_SCORE) {
-					canvasContext.fillText("O Computador Ganhou", 125, 200);
+					canvasContext.fillText("O Computador Ganhou", canvas.width/4 + 15, canvas.height /2 - 30);
 				}
-				
-
-				canvasContext.fillText("Clique para continuar", 150, 500);
+				canvasContext.fillText("Clique para continuar", canvas.width/4, canvas.height/2 + 30);
 				return;
 			}
 
@@ -156,8 +155,8 @@ function drawEverything(){
 			colorCircle(ballX, ballY, 10, 'white')
 
 			//Score
-			canvasContext.fillText(player1Score, 100, 100);
-			canvasContext.fillText(player2Score, canvas.width-100, 100);
+			canvasContext.fillText(player1Score, canvas.width /2 - 125, 100);
+			canvasContext.fillText(player2Score, canvas.width /2  + 100, 100);
 			
 			
 		}

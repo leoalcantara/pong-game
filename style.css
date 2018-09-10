@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@font-face {
+  font-family: 'VT323';
+  font-style: normal;
+  font-weight: 400;
+  src: local('VT323'), local('VT323-Regular'), url(http://themes.googleusercontent.com/static/fonts/vt323/v4/CfvjE7QXPaQqLo02SkpIgA.ttf) format('truetype');
+}
+
 
 body{
-	background-color: black;
-	font-family: 'Open Sans', sans-serif;
+	background-color: black;	
 }
 
 canvas{
@@ -12,5 +18,5 @@ canvas{
 	left: 0px;
 	right: 0px;
 	margin: auto;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'VT323', sans-serif;
 }
