@@ -40,7 +40,7 @@ function handMouseClick(evt){
 window.onload = function(){			
 	canvas = document.getElementById('gameCanvas');
 	canvasContext = canvas.getContext('2d');
-
+	
 	var framesPerSecond = 30;			
 	setInterval(function(){
 		moveEverything();
