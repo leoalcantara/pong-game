@@ -134,7 +134,7 @@ function drawEverything(){
 				canvasContext.fillStyle = "white";
 				canvasContext.font = " 30pt VT323";
 				if (player1Score >= WINNING_SCORE){
-					canvasContext.fillText("Você Ganhou", 250, 200);
+					canvasContext.fillText("Você Ganhou", canvas.width/3, canvas.height /2 - 30);
 				} else if (player2Score >= WINNING_SCORE) {
 					canvasContext.fillText("O Computador Ganhou", canvas.width/4 + 15, canvas.height /2 - 30);
 				}
