@@ -7,7 +7,7 @@ var ballSpeedY = 4;
 
 var player1Score = 0;
 var player2Score = 0;
-const WINNING_SCORE = 3;
+const WINNING_SCORE = 1;
 
 var showingScreen = false;
 
@@ -27,7 +27,6 @@ function calculateMousePos(evt){
 		y:mouseY
 	};
 }
-
 
 function handMouseClick(evt){
 	if(showingScreen){	
@@ -77,7 +76,6 @@ function computerMovement(){
 }
 
 function moveEverything(){
-
 	if(showingScreen){
 		return;
 	}
@@ -127,18 +125,21 @@ function drawEverything(){
 			// next line blanks out the screen with black	
 			colorRect(0,0,canvas.width, canvas.height,'black');	
 			//canvasContext.font = "italic 40pt arial";
-			canvasContext.font = " 70pt VT323";
+			canvasContext.font = " 75pt VT323";
 			canvas.style.border = "5px solid #fff";
 
 			if(showingScreen){				
 				canvasContext.fillStyle = "white";
-				canvasContext.font = " 30pt VT323";
+				
 				if (player1Score >= WINNING_SCORE){
-					canvasContext.fillText("Você Ganhou", canvas.width/3, canvas.height /2 - 30);
+					canvasContext.font = " 45pt VT323";
+					canvasContext.fillText("Você Ganhou!", canvas.width/4 +50, canvas.height /2 - 30);
 				} else if (player2Score >= WINNING_SCORE) {
-					canvasContext.fillText("O Computador Ganhou", canvas.width/4 + 15, canvas.height /2 - 30);
+					canvasContext.font = " 45pt VT323";
+					canvasContext.fillText("O Computador Ganhou!", canvas.width/4 -20 , canvas.height /2 - 30);
 				}
-				canvasContext.fillText("Clique para continuar", canvas.width/4, canvas.height/2 + 30);
+				canvasContext.font = " 30pt VT323";
+				canvasContext.fillText("Continuar...", canvas.width/4 + 100, canvas.height/2 + 30);
 				return;
 			}
 
