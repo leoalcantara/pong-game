@@ -1,4 +1,4 @@
-<h1 align="center">Jogo cl&aacute;ssico de tenis</h1>
+<h1 align="center">Jogo cl&aacute;ssico de Ping Pong</h1>
 <hr>
 <img src="https://img.shields.io/badge/made%20with-javascript-blue.svg?style=flat-square" alt="made with javascript">
 <br>
