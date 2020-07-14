@@ -7,7 +7,7 @@ var ballSpeedY = 4;
 
 var player1Score = 0;
 var player2Score = 0;
-const WINNING_SCORE = 1;
+const WINNING_SCORE = 5;
 
 var showingScreen = false;
 
